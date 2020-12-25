@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#upBtn {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.25rem;
+  font-size: 2rem;
+  position: fixed;
+  bottom: 2.5vw;
+  right: 2.5vw;
+  z-index: 2;
+  border-radius: 100%;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(255, 255, 255, 0.6) 50%
+  );
+  background-size: 200%;
+  background-position: 0%;
+  transition: all 0.5s;
+}
+
+#upBtn:focus,
+#upBtn:hover {
+  background-position: 100%;
+  color: black;
+}
+
+.btnEntrance {
+  animation: btnEntrance 0.5s;
+  animation-fill-mode: both;
+}
+
+/* Fade In Up */
+
+@keyframes btnEntrance {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.btnExit {
+  animation: btnExit 0.25s;
+  animation-fill-mode: both;
+}
+
+/* Fade Out Down */
+
+@keyframes btnExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}

@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="../CSS/style.css" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;1,400&display=swap"
+  rel="stylesheet"
+/>
+
+<div class="container">
+  <div class="head">
+    <img src="../../Pics/Only logo.png" alt="" />
+    <h1>Kazhal Saffron</h1>
+  </div>
+
+  <!-- NavBar -->
+
+  <input type="checkbox" id="chk" />
+  <label for="chk" class="show-menu-btn">
+    <i class="fas fa-ellipsis-h"></i>
+  </label>
+
+  <ul class="nav">
+    <li>
+      <a href="index.html"><i class="fas fa-home"></i></a>
+    </li>
+    <li id="lang">
+      <img src="../../Pics/Lang/USA.png" alt="USA flag" id="usa" />
+      <a href="../../Persian/Src/index.html"
+        ><img src="../../Pics/Lang/Iran.png" alt="Iran flag" id="iran"
+      /></a>
+    </li>
+    <li>
+      <a href="Products.html"><i class="fas fa-shopping-basket"></i></a>
+    </li>
+    <li>
+      <a href="Contact-us.html"><i class="fas fa-id-card"></i></a>
+    </li>
+    <li>
+      <a id="about-us" href="About-us.html"><i class="fas fa-info"></i></a>
+    </li>
+    <label for="chk" class="hide-menu-btn">
+      <i class="fas fa-times"></i>
+    </label>
+  </ul>
+</div>
+<script
+  src="https://kit.fontawesome.com/4b49816233.js"
+  crossorigin="anonymous"
+></script>
+
+<script>
+  const lang = document.querySelector("#lang");
+  lang.addEventListener("click", () => {
+    $("#iran").toggleClass("visible-flags");
+  });
+</script>

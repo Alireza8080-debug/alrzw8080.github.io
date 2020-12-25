@@ -1,0 +1,143 @@
+/* Reset everything */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Defining variables */
+
+:root {
+  --mainYellow: yellow;
+  --mainRed: rgb(160, 0, 11);
+  --transparent-red: rgba(160, 0, 11, 0.9);
+  --transparentYellow: rgba(255, 255, 0, 0.7);
+}
+
+/* Container */
+
+.contact-us-container {
+  animation: bounce 2s forwards ease-in;
+  transform: translateX(-100%);
+  opacity: 0;
+  margin: 12rem auto;
+  width: 60%;
+  height: fit-content;
+  background: var(--transparent-red);
+  color: var(--mainYellow);
+  border-radius: 7%;
+  min-width: 300px;
+  padding: 6rem 7.5%;
+  position: relative;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(+5%);
+  }
+  85% {
+    transform: translateX(-5%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.contact-us-container #divider {
+  border: 1px solid var(--mainYellow);
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-us-container #contact-us {
+  text-align: center;
+}
+
+/* Inputs */
+
+.contact-us-container input,
+.textbox {
+  font-size: 1.25rem;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  padding: 0.4rem;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--mainYellow);
+  color: var(--mainYellow);
+}
+
+::placeholder {
+  color: var(--transparentYellow);
+}
+
+:-ms-input-placeholder {
+  color: var(--transparentYellow);
+}
+
+::-ms-input-placeholder {
+  color: var(--transparentYellow);
+}
+
+.contact-us-container h2 {
+  display: inline;
+}
+
+.contact-us-container .textbox {
+  height: 8rem;
+}
+
+/* End of inputs */
+
+.btn1 {
+  font-size: 1rem;
+  padding: 1rem 6%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7%;
+  overflow: hidden;
+  background-image: linear-gradient(to right, var(--mainYellow) 50%, black 50%);
+  background-size: 200%;
+  background-position: 0%;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.btn1:hover {
+  color: var(--mainRed);
+  background-position: 100%;
+}
+
+/* Media */
+
+@media (max-width: 427px) {
+  .contact-us-container h1 {
+    font-size: 100%;
+  }
+}
+@media (max-width: 252px) {
+  showcase .contact-us-container {
+    padding: 2%;
+    width: 80vw;
+  }
+
+  .textbox {
+    position: relative;
+    bottom: 30px;
+  }
+
+  .btn1 {
+    position: relative;
+  }
+}

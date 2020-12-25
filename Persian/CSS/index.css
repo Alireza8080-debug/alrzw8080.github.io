@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Slider */
+
+.carousel-item img {
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+}
+
+.carousel-item {
+  height: fit-content;
+  background: no-repeat scroll center scroll;
+  background-size: cover;
+  transition: transform 2s;
+}
+
+.carousel-item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.carousel-caption {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.carousel-caption h5 {
+  font-size: 1.5rem;
+}
+
+.carousel-caption a {
+  display: inline-block;
+  margin: auto;
+  margin-top: 30px;
+  width: fit-content;
+  padding: 1.5rem 2rem;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.carousel-caption .btn-2 {
+  background-color: white;
+  color: #111010;
+}
+
+/* ShowCase */
+
+.header {
+  width: 95vw;
+  min-width: 300px;
+  height: fit-content;
+  background-color: rgba(148, 7, 7, 0.8);
+  margin: 2.5rem auto 5rem auto;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  color: rgb(240, 255, 0);
+}
+
+.content {
+  transform: scale(0);
+  background-color: rgba(148, 7, 7, 0.8);
+  color: rgb(240, 255, 0);
+  width: 300px;
+  margin: auto;
+  height: 25rem;
+  margin-bottom: 5rem;
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.animation1 {
+  animation: fadeIn 0.75s forwards;
+}
+
+.animation2 {
+  animation: fadeIn 0.75s forwards 0.25s;
+}
+
+.animation3 {
+  animation: fadeIn 0.75s forwards 0.5s;
+}
+
+.animation4 {
+  animation: fadeIn 0.75s forwards 0.75s;
+}
+
+.animation5 {
+  animation: fadeIn 0.75s forwards 1s;
+}
+
+.animation6 {
+  animation: fadeIn 0.75s forwards 1.25s;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.content h2 {
+  margin-top: 15%;
+  text-align: center;
+}
+.imgsaver {
+  display: block;
+  width: 80%;
+  height: 50%;
+  margin-top: 3.5rem;
+  margin-left: 10%;
+  border-radius: 50%;
+  transition: 2s;
+}
+
+/* Images & links */
+
+.content1 a {
+  background: url(../../Pics/ProductsHome/Saffron/1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.content2 a {
+  background: url(../../Pics/ProductsHome/Luxury-pack/1.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+.content3 a {
+  background: url(../../Pics/ProductsHome/Nuts/1.jpg) no-repeat center center;
+  background-size: cover;
+}
+.content4 a {
+  background: url(../../Pics/ProductsHome/Damask-roses-bud/1.jpeg) no-repeat
+    center center;
+  background-size: cover;
+}
+.content5 a {
+  background: url(../../Pics/ProductsHome/Cardamom/1.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+.content6 a {
+  background: url(../../Pics/ProductsHome/Handicraft/1.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+
+/* Changing images while hovering */
+
+.content1 a:hover {
+  background: url(../../Pics/ProductsHome/Saffron/2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.content2 a:hover {
+  background: url(../../Pics/ProductsHome/Luxury-pack/2.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+.content3 a:hover {
+  background: url(../../Pics/ProductsHome/Nuts/2.jpg) no-repeat center center;
+  background-size: cover;
+}
+.content4 a:hover {
+  background: url(../../Pics/ProductsHome/Damask-roses-bud/2.jpg) no-repeat
+    center center;
+  background-size: cover;
+}
+.content5 a:hover {
+  background: url(../../Pics/ProductsHome/Cardamom/2.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+.content6 a:hover {
+  background: url(../../Pics/ProductsHome/Handicraft/2.jpg) no-repeat center
+    center;
+  background-size: cover;
+}
+
+/* Properties */
+
+.container-card {
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+.card-container {
+  display: inline-block;
+  margin: 5rem auto;
+  width: 300px;
+  height: 600px;
+}
+
+.card-container hr {
+  background-color: yellow;
+  margin: 0.5rem 0;
+  height: 1px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+  border: none;
+}
+
+.card-flip {
+  animation: rotateCard 2s;
+}
+
+@keyframes rotateCard {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: yellow;
+}
+
+.card-1 figure {
+  background: url(../../PIcs/Properties-background/Saffron.jfif) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+.card-2 figure {
+  background: url(../../PIcs/Properties-background/Damask-rose.jfif) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+.card-3 figure {
+  background: url(../../PIcs/Properties-background/Cardamom.jfif) no-repeat
+    center center fixed;
+  background-size: cover;
+}
+
+.card .front {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card .back {
+  padding: 0 15%;
+  font-size: 1.25rem;
+  transform: rotateY(180deg);
+}
+
+.card .back p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Media */
+
+@media (min-width: 899px) {
+  showcase .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 899px) {
+  .header h1 {
+    font-size: 1rem;
+  }
+  .content {
+    margin: 2.5rem auto;
+    height: 18rem;
+  }
+  .content6 {
+    margin-bottom: 8rem;
+  }
+  .content h2 {
+    position: relative;
+    top: 1.25rem;
+  }
+}
